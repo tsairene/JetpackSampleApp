@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="rene.playground.lib.location">
+
+    <application>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+
+            <!-- Automatically Initialize FakeTaskManager at app startup -->
+            <meta-data
+                android:name="rene.playground.lib.location.LocationManagerInitializer"
+                android:value="androidx.startup" />
+
+        </provider>
+    </application>
+</manifest>

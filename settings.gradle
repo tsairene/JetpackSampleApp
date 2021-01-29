@@ -1,0 +1,4 @@
+rootProject.name = "JetpackSampleApp"
+include ':app'
+include ':app:map'
+include ':app:location'

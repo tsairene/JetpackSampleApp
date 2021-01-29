@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="rene.playground.lib.map">
+
+    <application>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+
+            <!-- automatically initialize MapManager component -->
+            <meta-data
+                android:name="rene.playground.lib.map.MapManagerInitializer"
+                android:value="androidx.startup"
+                />
+            <!-- Disable automatic initialization for an individual component -->
+            <!-- Use AppInitializer to manually call component initializers -->
+<!--                tools:node="remove"-->
+
+        </provider>
+    </application>
+</manifest>
